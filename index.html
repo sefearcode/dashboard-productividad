@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard de Productividad</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Dashboard de Productividad</h1>
+    <button id="toggle-theme" aria-label="Cambiar tema">🌓</button>
+  </header>
+
+  <main class="container">
+    <section class="tasks-section">
+      <h2>Tareas</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Nueva tarea" required />
+        <select id="task-priority">
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+        </select>
+        <input type="date" id="task-date" />
+        <button type="submit">Agregar</button>
+      </form>
+      <div id="task-list"></div>
+    </section>
+
+    <section class="pomodoro-section">
+      <h2>Pomodoro</h2>
+      <div class="pomodoro-timer" id="pomodoro-display">25:00</div>
+      <div class="pomodoro-controls">
+        <button id="start-pomodoro">Iniciar</button>
+        <button id="stop-pomodoro">Detener</button>
+        <button id="reset-pomodoro">Reiniciar</button>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <h2>Estadísticas</h2>
+      <p><strong>Tareas completadas:</strong> <span id="stats-completed">0</span></p>
+      <p><strong>Total Pomodoros:</strong> <span id="stats-pomodoros">0</span></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
